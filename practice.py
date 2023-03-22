@@ -14,9 +14,9 @@ soup = BeautifulSoup(response.text, "html.parser")
 table = soup.find("table", class_="tbl_exchange")
 
 # 테이블에서 매매 기준율, 전일대비, 등락률을 추출합니다.
-rate = table.find("span", class_="value").text # 매매 기준율
-change = table.find("span", class_="change").text # 전일대비
-updown = table.find("span", class_="blind").text # 등락률
+rate = table.find("span", class_="value").text  # 매매 기준율
+change = table.find("span", class_="change").text  # 전일대비
+updown = table.find("span", class_="blind").text  # 등락률
 
 # 결과를 출력합니다.
 print(f"{currency}/KRW 환율 정보")
